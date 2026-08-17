@@ -1,6 +1,10 @@
-# Zep V3 SDK. Official LangGraph docs (2026) require zep-cloud >=3.23.0.
+# Zep V3 SDK.
 zep-cloud>=3.23.0,<4
-langgraph>=1.2.5,<2
+
+# This lab only uses the core StateGraph API. Keep LangGraph on the 0.x line so
+# pip does not pull langchain-core 1.x, which conflicts with some lab envs.
+langgraph>=0.6,<1
+langchain-core>=0.3.67,<1
 
 # Gemini LLM for the demo UI chat reply (gemini-2.5-flash-lite by default).
 google-genai>=1.0,<2
